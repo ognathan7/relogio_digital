@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(135deg, #7a05ff, #cc00ff)
+    ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.clock{
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px 50px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    animation: pulse 3s infinite;
+}
+
+.clock div{
+    color: #fff;
+    font-style: 5rem;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s;
+}
+.clock span{
+    color: fff;
+    font-size: 5rem;
+    opacity: 0.6;
+}
+.clock div:hover{ 
+transform: scale(1.1);
+
+}
+@keyframes pulse{
+    0%, 100%{
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    50%{
+        box-shadow: 0 0 30px rgba(255, 255, 255, 0.9);
+    }
+}
+`@media (max-width:500px){
+    .clock{
+        padding: 20px 30px;
+        gap: 10px;
+    }
+    .clock div, .clock span{
+        font-size: 3rem;
+    }
+}
+
+
